@@ -215,10 +215,12 @@ section {
 }
 
 .section__pic-container {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto;
   display: flex;
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
+  justify-content: center;
 }
 
 .section__text {
