@@ -268,3 +268,9 @@
     width: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  #projects .article-container {
+    height: 340px;
+  }
+}
