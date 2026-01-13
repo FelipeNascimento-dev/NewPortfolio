@@ -54,7 +54,7 @@ function setLightMode() {
 
 function baixarCV() {
   const link = document.createElement("a");
-  link.href = "./assets/CurriculoJunho.pdf";
+  link.href = "./assets/CURRICULO JANEIRO 26.pdf";
   link.download = "Curriculo-FelipeNascimento.pdf";
   document.body.appendChild(link);
   link.click();
