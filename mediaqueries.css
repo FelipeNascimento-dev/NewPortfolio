@@ -274,3 +274,72 @@
     height: 340px;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  #projects .about-containers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #projects .about-containers {
+    grid-template-columns: 1fr; /* 🔥 um projeto por linha */
+  }
+
+  .formulario-contato {
+    max-width: 280px;
+    margin: 1.5rem 0.75rem;
+    padding: 1.25rem;
+    border-radius: 1.25rem;
+  }
+
+  .campo-form {
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .botao-form {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
+
+  /* TEXTO ACIMA DO FORM */
+  #contact .section__text__p1 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  /* BLOCO EMAIL + LINKEDIN */
+  .contact-info-upper-container {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .contact-info-container {
+    justify-content: center;
+  }
+
+  #experience .details-container {
+    padding: 1.25rem;
+    margin: 0 auto 1.5rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* GRID DAS SKILLS → 1 COLUNA */
+  #experience .article-container {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  /* ITEM (ÍCONE + TEXTO) */
+  #experience article {
+    align-items: flex-start;
+  }
+
+  #experience article .icon {
+    margin-top: 0.15rem;
+  }
+}
