@@ -1,126 +1,3 @@
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
-  }
-
-  .about-containers {
-    flex-wrap: wrap;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  #desktop-nav {
-    display: none;
-  }
-
-  #hamburger-nav {
-    display: flex;
-  }
-
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
-  }
-
-  #profile,
-  .section-container {
-    display: block;
-  }
-
-  .arrow {
-    display: none;
-  }
-
-  section,
-  .section-container {
-    height: fit-content;
-  }
-
-  section {
-    margin: 0 5%;
-  }
-
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
-  }
-
-  .about-containers {
-    margin-top: 0;
-  }
-}
-
-@media screen and (max-width: 600px) {
-
-  #contact,
-  footer {
-    height: 40vh;
-  }
-
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
-  }
-
-  article {
-    font-size: 1rem;
-  }
-
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
-  }
-
-  .contact-info-container {
-    margin: 0;
-  }
-
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
-
-  .logo {
-    font-size: 1.5rem;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-  }
-
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
-  }
-
-  .section__text__p2 {
-    font-size: 1.25rem;
-  }
-
-  .title {
-    font-size: 2rem;
-  }
-
-  .text-container {
-    text-align: justify;
-  }
-}
-
 /* ========== RESPONSIVIDADE ========== */
 
 /* Tablets, laptops menores */
@@ -135,7 +12,7 @@
   }
 
   .formulario-contato {
-    margin: 2rem 2rem;
+    margin: 2rem auto;
   }
 }
 
@@ -185,10 +62,19 @@
   .formulario-contato {
     padding: 1.5rem;
   }
+
+  #projects .about-containers {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  #projects .article-container {
+    height: 280px;
+  }
 }
 
 @media screen and (max-width: 600px) {
-
   #contact,
   footer {
     height: auto;
@@ -205,17 +91,12 @@
 
   footer nav {
     height: fit-content;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   .about-containers,
-  .contact-info-upper-container,
   .btn-container {
     flex-wrap: wrap;
-  }
-
-  .contact-info-container {
-    margin: 0;
   }
 
   .contact-info-container p,
@@ -231,9 +112,7 @@
     font-size: 1.5rem;
   }
 
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
+  .menu-links {
     text-align: center;
   }
 
@@ -255,40 +134,47 @@
     text-align: justify;
   }
 
-  .formulario-contato {
-    padding: 1rem;
-    margin: 1rem;
+  #projects .about-containers {
+    grid-template-columns: 1fr;
   }
 
-  .campo-form {
+  #contact {
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  #contact .section__text__p1 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .contact-info-upper-container {
+    flex-direction: column;
+    width: 100%;
+    max-width: 340px;
+    align-items: flex-start;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem auto;
+    gap: 0.85rem;
+  }
+
+  .contact-info-container {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .contact-info-container p {
     font-size: 0.95rem;
   }
 
-  .botao-form {
-    width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  #projects .article-container {
-    height: 340px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  #projects .about-containers {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 600px) {
-  #projects .about-containers {
-    grid-template-columns: 1fr; /* 🔥 um projeto por linha */
-  }
-
   .formulario-contato {
-    max-width: 280px;
-    margin: 1.5rem 0.75rem;
+    width: 100%;
+    max-width: 340px;
+    margin: 1.5rem auto 0;
     padding: 1.25rem;
     border-radius: 1.25rem;
   }
@@ -304,21 +190,12 @@
     font-size: 1rem;
   }
 
-  /* TEXTO ACIMA DO FORM */
-  #contact .section__text__p1 {
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  /* BLOCO EMAIL + LINKEDIN */
-  .contact-info-upper-container {
-    flex-direction: column;
-    gap: 0.75rem;
-    padding: 0.75rem 1rem;
-  }
-
-  .contact-info-container {
+  footer .nav-links {
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 1rem 1.25rem;
+    font-size: 1rem;
   }
 
   #experience .details-container {
@@ -328,13 +205,11 @@
     max-width: 100%;
   }
 
-  /* GRID DAS SKILLS → 1 COLUNA */
   #experience .article-container {
     grid-template-columns: 1fr;
     gap: 1.25rem;
   }
 
-  /* ITEM (ÍCONE + TEXTO) */
   #experience article {
     align-items: flex-start;
   }

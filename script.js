@@ -39,7 +39,8 @@ function setDarkMode() {
   localStorage.setItem("theme", "dark");
 
   themeIcons.forEach((icon) => {
-    icon.src = icon.getAttribute("src-dark");
+    const darkSrc = icon.getAttribute("src-dark");
+    if (darkSrc) icon.src = darkSrc;
   });
 }
 
@@ -48,7 +49,8 @@ function setLightMode() {
   localStorage.setItem("theme", "light");
 
   themeIcons.forEach((icon) => {
-    icon.src = icon.getAttribute("src-light");
+    const lightSrc = icon.getAttribute("src-light");
+    if (lightSrc) icon.src = lightSrc;
   });
 }
 
