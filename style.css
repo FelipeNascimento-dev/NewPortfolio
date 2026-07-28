@@ -428,11 +428,14 @@ article p {
 
 #projects .article-container {
   width: 100%;
-  height: 340px;              /* altura padrão elegante */
+  aspect-ratio: 16 / 10;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  border-radius: 1.5rem;
+  background: var(--primary-color-2);
 }
 
 #projects .details-container {
@@ -443,7 +446,7 @@ article p {
 
 #projects .about-containers {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 🔥 sempre 3 por linha */
+  grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
   align-items: stretch;
 }
@@ -452,8 +455,8 @@ article p {
   border-radius: 1.5rem;
   width: 100%;
   height: 100%;
-  max-width: 100%;
-  max-height: 100%;
+  object-fit: cover;
+  object-position: top center;
   display: block;
 }
 

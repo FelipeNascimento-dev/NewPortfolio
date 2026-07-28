@@ -70,7 +70,7 @@
 
 @media (max-width: 768px) {
   #projects .article-container {
-    height: 280px;
+    aspect-ratio: 16 / 10;
   }
 }
 
